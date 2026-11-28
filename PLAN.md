@@ -95,7 +95,7 @@ If the confirmed deadline differs from the dates below, move the dates but keep 
 
 ## Round 1: what I'll draft
 
-**Status 28 Nov:** Round 1 is unlocked. The team picked **A, the ASHA home visit** (product name *Bheti*). Paste-ready answers are local-only in `round1/` (`1_idea.txt`, `2_prompt.txt`, `3_impact.txt`).
+**Status 28 Nov:** Round 1 is unlocked. The team picked **A, the ASHA home visit** (product name *Bheti*). Paste-ready answers are in `round1/` (`1_idea.txt`, `2_prompt.txt`, `3_impact.txt`).
 
 **How the dashboard grades it** (from the site's own activity rules):
 | Activity | Points | Limit | Graded on |
@@ -297,7 +297,7 @@ Flow appears as how we built it (ten seconds of us building by voice), not as a 
 
 ### Project repo
 - `gd23456/solaris` is private and holds this plan. Priyanshu (`Priyanshu-senapati`) has write access. When the template is known, it comes in as the first code commit.
-- Local copy at `~/solaris`, with its own git repo. Your home folder is also a git repo, so I check the repo root before every git command. Round 1 drafts stay local-only via `.git/info/exclude`. Commits here carry no Claude co-author line.
+- Local copy at `~/solaris`, with its own git repo. Your home folder is also a git repo, so I check the repo root before every git command. Commits here carry no Claude co-author line.
 - **Before it goes public:**
   - scan the full git history for secrets (gitleaks)
   - remove `PLAN.md` and other internal notes
@@ -366,7 +366,7 @@ The build is ready only when all of these hold:
 - **Profile:** github.com/gd23456, opened logged out, shows the README and pins, and no private details.
 
 ## Next moves (on hold until the idea is refined)
-1. Three idea cards with sourced numbers, in `~/solaris/round1/ideas.md` (local-only).
+1. Three idea cards with sourced numbers, in `round1/ideas.md`.
 2. The GitHub profile README and bio draft, for your review.
 3. Full Round 1 drafts for the idea you pick, with the prompt tested in an AI app builder.
 4. The voice kit backend, and a smoke deploy to the `solaris` Cloud Run service.

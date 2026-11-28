@@ -1,0 +1,38 @@
+WHO BENEFITS
+1. ASHA workers. There are over 10.29 lakh of them (PIB, January 2025), and for most rural families an ASHA is the first point of contact with the health system. Every pregnancy means antenatal visits. Under Home Based Newborn Care, every newborn means six home visits in the first 42 days (seven after a home birth), then a visit every quarter until the first birthday. Each visit has to be recorded.
+2. Pregnant women and newborns in the homes they visit, especially where the PHC is far away.
+3. ANMs and PHC doctors, who act on referrals and supervise the ASHAs of their area.
+4. District health teams, who plan with this data.
+
+WHAT CHANGES: BEFORE AND AFTER
+Example 1, a high-risk pregnancy.
+Before: Lakshmi is 32 weeks pregnant in Kalenahalli. At 2 pm, Shanta, her ASHA, measures her BP: 150/100, and her feet are swollen. Shanta's hands are full, so she notes it on a scrap of paper and copies it into the register at night. The ANM sees the register at the monthly meeting. Until then, nobody acts on the reading, unless Lakshmi reaches the PHC as an emergency.
+After: Shanta says the reading aloud while still in the house. Bheti fills in the form and asks "Any headache or blurred vision?" Then it applies the protocol, and at 2:05 pm the ANM gets an alert that Lakshmi should be referred today. Shanta tells the family before she leaves, and the visit is already recorded.
+
+Example 2, a newborn.
+Before: on day 7, a baby feels cold and is feeding poorly. The ASHA tells the mother to keep the baby warm, but the danger sign sits in her notebook until the register is updated.
+After: she says "baby not feeding well, feels cold". Bheti asks for the temperature, sees 35°C, which is below the protocol's limit, marks the visit urgent and alerts the ANM at once.
+
+Across India: if even a third of ASHAs used Bheti, more than three lakh women would record visits as they happen. Danger signs from millions of home visits a year would reach a nurse the same day, not at the next monthly meeting.
+
+HOW VOICE IMPROVES ACCESS, PRODUCTIVITY AND PARTICIPATION
+Access: ASHAs who find typing hard, or who are more fluent in Kannada, Odia or their dialect than in a form's English or Hindi columns, can keep complete records. The woman being visited hears her own record read back in her language, so she understands why a referral matters.
+Productivity: she enters each visit once, not on paper and then again in an app. The app asks only for what is missing, and the evening spent copying registers disappears. Our target is a saved record within two minutes of the visit ending.
+Participation: much of an ASHA's pay comes as incentives for recorded work, for example Rs 250 for a full set of newborn visits. Complete, on-time records mean she is paid for work she has already done. Districts also see high-risk pregnancies the same week, not at the end of the month.
+
+WHAT COULD PREVENT ADOPTION, AND HOW WE WOULD ADDRESS IT
+1. "Another app." States already run their own ASHA apps. Bheti is a voice layer that fills in the existing forms and exports them in the state app's format, so it adds to the current workflow instead of replacing it. We would start with one district's NHM team.
+2. Trust and safety. In health, a wrong or missed alert matters. The rules are fixed, taken from the state protocol and signed off by the district team. The AI only turns speech into fields, and every record is read back and confirmed by the ASHA. Bheti never gives a diagnosis or medicine advice.
+3. Dialects and noisy homes. We would start with two languages and test them on real recordings from ASHAs in the pilot district. If the app is not sure what it heard, it asks again, and after two failures it offers large tap buttons.
+4. Weak network and cheap phones. Bheti works offline first: visits are saved on the phone and sync later, and alerts fall back to SMS. It is a light web app that runs on low-end Android phones.
+5. Privacy. We take consent at registration and collect only the fields the form needs. Audio is deleted after transcription unless the woman agrees to keep it, and data is stored in India in line with the Digital Personal Data Protection Act, 2023.
+6. Training and workload. An ASHA facilitator runs a 30-minute session, spoken prompts teach as she goes, and there is no password to forget.
+
+HOW WE WOULD KNOW IT WORKS
+A three-month pilot with about 50 ASHAs in one block, measured against the first two weeks of paper records as a baseline:
+1. Share of visits recorded within one hour of the visit.
+2. Time from a danger sign being found to the ANM being alerted, which we expect to drop from days to minutes.
+3. Share of required fields filled in.
+4. Field accuracy, checked by the ANM on a random sample of visits.
+5. Share of flagged women who actually reach the PHC.
+6. Time ASHAs save each day, and whether they keep using Bheti after the first month.

@@ -1,0 +1,60 @@
+Build a mobile-first progressive web app called Bheti ("visit" in Kannada, Hindi and Odia). An ASHA worker uses it to record a home visit to a pregnant woman or a newborn entirely by speaking, in her own language. When a fixed protocol flags a danger sign, it alerts her ANM.
+
+USERS
+1. ASHA worker: a low-cost Android phone with patchy 2G or 4G. She is comfortable with WhatsApp but slow at typing, especially in her own script. She speaks Kannada, Hindi or Odia, often mixed with English for numbers and medical words ("BP one fifty by hundred").
+2. ANM supervisor: gets alerts and reviews flagged visits.
+
+LANGUAGES AND ACCENTS
+Support Kannada (the default), Hindi, Odia and English, including code-mixed speech and regional accents. Detect the spoken language automatically, and let her switch by saying "Hindi please". All speech and text follow her chosen language. Numbers are read back digit by digit ("one five zero by one zero zero").
+
+CORE JOURNEY
+Find the person, speak what you saw, answer any follow-up, hear the summary, confirm, save, and alert the ANM if a rule fires. All of it must work without the keyboard.
+
+SCREENS AND THE VOICE STEPS ON EACH
+1. Today: a large mic button (hold to talk, or tap once for hands-free) and today's due visits as big cards. Voice: "New visit, Lakshmi, Kalenahalli" opens her card. "Who is due today?" reads the list aloud.
+2. Confirm person: name, husband's name, village, weeks pregnant or baby's age, last visit date. The app reads it and asks "Is this right?" Voice: "Yes", "No", or a detail that tells two people apart ("Lakshmi, wife of Ramesh"). If two records match, it reads both and asks which.
+3. Speak the visit: a recording indicator with a sound-level bar, the transcript after each clip, and a checklist that fills in as fields are understood.
+   - Pregnancy fields: BP, weight, haemoglobin if known, swelling, headache, blurred vision, bleeding, fever, iron tablets taken.
+   - Newborn fields: feeding, temperature, breathing, cord, weight.
+   Voice: she speaks freely, in one go or in pieces. The app then asks only about required fields that are still missing, one question at a time.
+4. Check and confirm: a summary in her language, each value next to the words she used. The app reads it aloud and says "Say yes to save, or tell me what to change." Voice: "Change weight to 56", "Remove fever", "Yes".
+5. Danger sign: if a rule fires, a red banner gives the reason in plain words ("BP is high, with swelling and headache") and the protocol's action ("Refer to PHC today"). The app asks "Shall I alert the ANM?" Voice: "Yes", or "No, she is already going".
+6. Saved: a receipt with a visit number, showing either "Sent" or "Saved on phone, will send when network returns". Voice: "Next visit" returns to Today.
+7. ANM view: flagged visits, most urgent first, each with the reason, the ASHA's name, a call button and "Mark seen".
+
+DATA
+- Beneficiary: id, name, husband's or father's name, village, phone, type (pregnancy or newborn), last menstrual period or date of birth, past flags.
+- Visit: id, beneficiary id, time, language, original transcript, extracted fields, missing fields, danger flags, status (draft, confirmed, synced), ASHA id.
+- Seed: 12 beneficiaries in two Karnataka villages with Kannada names, and one ANM.
+
+RULES (FIXED, IN AN EDITABLE TABLE)
+The language model only turns speech into fields. Plain code decides.
+- Pregnancy: BP of 140/90 or above means refer to the PHC the same day. BP that high together with headache, blurred vision or swelling is urgent. Any bleeding is urgent.
+- Newborn: not feeding, a temperature of 37.5°C or above or below 35.5°C, fast breathing (60 or more breaths a minute), or convulsions are urgent.
+- Label the table "to be checked against the state protocol".
+
+VOICE BEHAVIOUR
+- Speech to text behind a SpeechProvider interface: the browser's recognition where it supports the language, with a slot for an Indian-language provider such as Sarvam or Bhashini.
+- Field extraction behind an Extractor interface: a keyword and number parser for the demo, with a slot for a language model that must return JSON matching the field schema.
+- Spoken replies in her language, at a slightly slow rate.
+- "Repeat", "Go back", "Cancel" and "Help" work on every screen.
+
+NOISE, LOW CONNECTIVITY AND ERRORS
+- Not understood, or empty audio: "I could not hear that clearly. Please say it again, closer to the phone." After two failures on the same field, show large tap options for that field only.
+- Implausible values (BP 1500, an adult weighing 5 kg): read back and confirm; never save silently.
+- Offline first: visits are saved in the browser (IndexedDB) and queued, a badge shows how many are waiting, and sync retries automatically. If speech recognition needs the network and there is none, save the audio, transcribe it when the network returns, and mark the visit "waiting to process".
+- Alerts: in the app when online, "Send by SMS" when offline (simulated).
+- Microphone blocked: a picture showing how to allow it.
+- Every save carries a unique id, so a double tap or a retry never creates two visits.
+
+DESIGN
+Mobile first at 360 px wide, text at least 18 px, high contrast, large touch targets, and an icon and an audio prompt for every label. No login: use a demo ASHA profile.
+
+ACCEPTANCE TESTS
+1. Saying "New visit, Lakshmi, Kalenahalli" opens the right card.
+2. Saying "BP 150 by 100, feet swollen, headache" shows an urgent referral and asks whether to alert the ANM.
+3. A missing BP triggers exactly one follow-up question.
+4. In airplane mode, a visit saves as "Saved on phone" and syncs once the network is back.
+
+OUT OF SCOPE
+Diagnosis, treatment advice, integration with real government systems, and user accounts.

@@ -1,0 +1,13 @@
+The task: Recording a home visit. After each visit to a pregnant woman or a newborn, an ASHA worker writes what she found into paper registers and later types the same details into her state's health app, or hands them to the ANM to enter.
+
+Who does it and what is hard today: India's ASHA workers, about ten lakh women who visit homes on foot in villages and urban slums. During a visit her hands are full with the BP machine, the weighing scale and the mother's MCP card. The forms are in English or Hindi columns, while she thinks and speaks in Kannada, Odia, Bhojpuri or her own dialect. So she fills them in at night from memory, writes everything twice, and entries get delayed or skipped. A danger sign, like high BP and swelling in the eighth month, can reach the ANM days late.
+
+The voice-first steps:
+1. Still in the home, she says "New visit, Lakshmi, Kalenahalli". The app finds Lakshmi's record and replies in Kannada: "Lakshmi, 32 weeks pregnant, last visit 12 November. Is that right?" She says "Yes."
+2. She describes the visit in her own words, mixing languages as she normally does: "BP 150 by 100, weight 58 kilo, feet swollen for two days, she is taking her iron tablets."
+3. The app fills in the visit form and asks only about what is missing: "Any headache or blurred vision?" She says "Headache, yes."
+4. It reads the record back to her. Because BP is high with swelling and headache, the fixed protocol (not the AI) says she should be referred to the PHC today, so it asks "Shall I alert the ANM?" She says "Yes, alert."
+5. It saves the visit, keeps it on the phone if there is no network and sends it later, alerts the ANM, and confirms aloud: "Saved. ANM Shobha has been told."
+
+Why voice works better: She can record the visit while it happens, with her hands and eyes free for the mother and the baby. She speaks once, in her own language, instead of writing in one script and typing in another. Records become complete and on time, and a danger sign reaches the ANM the same day instead of at the next meeting. It works for ASHA workers who find typing on a phone hard.
+
