@@ -95,6 +95,17 @@ If the confirmed deadline differs from the dates below, move the dates but keep 
 
 ## Round 1: what I'll draft
 
+**Status 28 Nov:** Round 1 is unlocked. The team picked **A, the ASHA home visit** (product name *Bheti*). Paste-ready answers are local-only in `round1/` (`1_idea.txt`, `2_prompt.txt`, `3_impact.txt`).
+
+**How the dashboard grades it** (from the site's own activity rules):
+| Activity | Points | Limit | Graded on |
+|---|---|---|---|
+| 1. Idea | 0 (pass/fail) | 50–500 words | One everyday task, its voice-only version, and users in India. Fails on gibberish, duplication, copied questions, off-topic text, or being too general |
+| 2. Prompt | 50 | 1,000 words | Theme fit 25%, completeness 25%, clarity and specificity 20%, buildability 15%, originality 15%. **The accepted prompt is final** |
+| 3. Impact | 25 | 1,000 words | Theme fit 25%, impact 25%, specificity and reasoning 20%, adoption feasibility 15%, originality 15% |
+
+Activities unlock one after another. Sign up for Wispr Flow before submitting Activity 3 to stay eligible for the Round 1 prizes.
+
 **These three ideas are for Round 1 only.** Round 1 has to be submitted before the Round 2 statement is visible, so it needs one idea now. The Round 2 product follows the official statement, whatever we pick here.
 
 | | Idea | Who has the problem | Why speaking is the way | Builds on |
